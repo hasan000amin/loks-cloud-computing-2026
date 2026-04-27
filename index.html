@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lomba Cloud - Form Pendaftaran</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Arial, sans-serif;
+        background: #667eea;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        background: white;
+        border-radius: 10px;
+        padding: 30px;
+        width: 450px;
+      }
+      h1 {
+        text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 15px;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+      }
+      button {
+        background: #667eea;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 20px;
+      }
+      .note {
+        font-size: 12px;
+        color: #999;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>📋 Form Pendaftaran</h1>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+        <label>Nama Lengkap:</label>
+        <input
+          type="text"
+          name="nama"
+          placeholder="Contoh: Ahmad Fauzi"
+          required
+        />
+
+        <label>Email:</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="contoh@email.com"
+          required
+        />
+
+        <label>Foto Profil:</label>
+        <input type="file" name="foto" accept="image/jpeg,image/png" required />
+        <div class="note">* Format JPG/PNG, maksimal 2MB</div>
+
+        <button type="submit">🚀 Kirim Data</button>
+      </form>
+    </div>
+  </body>
+</html>
